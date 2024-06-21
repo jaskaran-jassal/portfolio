@@ -8,7 +8,6 @@ body {
   background-color:  #7600bc;
   padding-bottom: 1cm;
   margin-left:-1cm;
-  margin-right:-10cm;
   margin-top:-1cm;
   padding-top: 2cm;
   padding-bottom: 2cm;
@@ -120,6 +119,14 @@ h2 {
   display: flex;
   flex-direction: row;
   flex-flow: wrap;
+  justify-content: center;
+
+}
+#skills {
+  /* Example styles */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .skill {
@@ -163,6 +170,13 @@ h2 {
 
 /* Projects */
 
+#projects {
+  /* Example styles */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .projects-container {
   margin-top: 30px;
   margin-left: 60px;
@@ -190,6 +204,17 @@ h2 {
 }
 
 /* Recommendations */
+#recommendations {
+  /* Example styles */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .all_recommendations {
   display: flex;
@@ -323,4 +348,46 @@ button:hover {
   border-radius: 6px;
   text-align: center;
   cursor: pointer;
+}
+/* Keyframes for waving animation */
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(-10deg); }
+  40% { transform: rotate(12deg); }
+  60% { transform: rotate(-10deg); }
+  80% { transform: rotate(9deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Apply the wave animation to the waving-hand image */
+#waving-hand {
+  display: inline-block;
+  animation: wave 2s infinite;
+  transform-origin: 70% 70%; /* Adjust based on where the "hand" should rotate */
+}
+/* Dynamic Text */
+#dynamic-text {
+  display: inline;
+}
+.contact-details {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 20px; /* Adjust as needed */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+
+.contact-details p {
+  margin: 0; /* Remove default margin for <p> */
+  font-size: 18px;
+}
+
+.contact-details a {
+  text-decoration: none;
+  color: #007bff; /* Link color */
+}
+
+.contact-details a:hover {
+  text-decoration: underline; /* Underline on hover */
 }

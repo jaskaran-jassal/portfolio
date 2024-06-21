@@ -26,3 +26,18 @@ function showPopup(bool) {
     document.getElementById('popup').style.visibility = 'hidden'
   }
 }
+document.addEventListener('DOMContentLoaded', () => {
+  const text = "I'm Jaskaran Jassal!";
+  const dynamicText = document.getElementById('dynamic-text');
+  let index = 0;
+
+  function type() {
+    if (index < text.length) {
+      dynamicText.innerHTML += text.charAt(index);
+      index++;
+      setTimeout(type, 100);
+    }
+  }
+
+  type();
+});
